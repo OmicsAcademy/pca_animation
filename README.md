@@ -35,3 +35,14 @@ As our test image dataset, we have collected images of Vincent van Gogh's portra
 2. In addition, we seek to further elucidate the relationship between the image basis and basis of principal axes. Since each principal axis is some linear combination of image basis vectors, we can visualize the projection of the principal axes back onto the image space, and offer a more palpable intepretation of this transformed basis.
 
 3. As noted, the principal axes are chosen such that the variance of the data along each axis is as large as possible. The total variance captured by each principal axis is quantified by the explained variance. We lastly track the cumulative explained variance ratio, whose sum across all principal axes is one, as a metric of how much variability in the data has been accounted for. This quantitative element offers a concise representation of what is observed visually over the course of image reconstruction.
+
+#### References
+1. "Vincent van Gogh, his Life and Paintings." Vincent van Gogh Paintings, Drawings, Quotes, and Biography. [https://www.vincentvangogh.org/](https://www.vincentvangogh.org/).
+
+2. VanderPlas, Jake. "In Depth: Principal Component Analysis." Python Data Science Handbook: Essential tools for working with data. " O'Reilly Media, Inc.", 2016. [https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html](https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html).
+
+3. “Sklearn.decomposition.PCA.” Scikit-Learn 0.19.2 Documentation, [scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA](scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA).
+
+4. Tiao, Louis. “Embedding Matplotlib Animations in Jupyter Notebooks.” Louis Tiao, 16 Apr. 2016, [louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-notebooks/](louistiao.me/posts/notebooks/embedding-matplotlib-animations-in-jupyter-notebooks/).
+
+5. Tiao, Louis. “Save Matplotlib Animations as GIFs.” Louis Tiao, 4 Aug. 2016, [http://louistiao.me/posts/notebooks/save-matplotlib-animations-as-gifs/](http://louistiao.me/posts/notebooks/save-matplotlib-animations-as-gifs/).
