@@ -6,9 +6,10 @@
 ##
 
 **Artifact:**
+
 ![artifact](artifacts/jovanaandrejevic_artifact.gif)
 
-**Code:** [code](code/jovanaandrejevic_code.ipynb)
+**Code:** Please follow [link](code/jovanaandrejevic_code.ipynb) to the code.
 
 ### Explanation
 
