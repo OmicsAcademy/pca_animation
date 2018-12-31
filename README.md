@@ -14,27 +14,18 @@
 ### Explanation
 
 #### Introduction
-Principal component analysis is a technique in data science that finds an optimal, alternate and often reduced representation of high-dimensional data. Optimal in the context of PCA means that the coordinates of the data in the transformed basis capture the greatest variability in the data.
+An artist's perception of the world is often through a different lens. Vincent van Gogh, working during the Impressionist Era, rejected the exactness of increasingly popular photography in favor of simpler representations, reducing the subjects of his paintings to their essential features. Produced with coarse, prominent brush strokes or an unconventional color palette, van Gogh's portraits were unmistakably distinguishable, though far from an exact likeness.
 
-As a simple example, we can consider a dataset comprised of 2x2 images. In this representation, each image is described by 2x2x3=12 coordinates corresponding to the values of each pixels' red, green, and blue channels. We refer to this as the image basis. The first basis vector in the image basis is:
-![vector](code/figures/vector.png)
-The set of all twelve basis vectors in this example can be visualized below:
-![basis](code/figures/image_basis.png)
+Principal component analysis is much like a view through an artist's eye. By reducing a collection of data only to those features which capture the greatest *variability* across the dataset, it can provide a simpler representation of high-dimensional data.
 
-Principal component analysis involves a change of basis; rather than characterizing each image by a set of coordinates representing pixel RGB channels, the image can be suitably represented in a new basis of principal axes, which is typically smaller than the initial number of coordinates. 
+A common application of principal component analysis is dimensionality reduction, as principal components are sorted to express as much variability in the data as possible. We will use animation to illustrate how principal component analysis can be used to reconstruct an image with considerably less information needed.
 
-Each principal axis is some linear combination of the image basis vectors, formed so that the coordinate of the images along the first principal axis - their first principal component - has the largest variance. The second principal axis is chosen such that the second principal component has the next largest possible variance while maintaining that the second and first principal axes are orthogonal, and so on.
+As our test image dataset, we have collected color images of Vincent van Gogh's portrait artwork, cropped to a uniform 136x136 pixel region - an image basis of 136x136x3=55488 basis vectors. All images are obtained from [vincentvangogh.org](https://www.vincentvangogh.org/), which hosts a gallery of van Gogh's works.
 
-A common application of principal component analysis is dimensionality reduction, as principal components are sorted to express as much variability in the data as possible. We use animation to illustrate how principal component analysis can be used to reconstruct an image with considerably less information needed.
-
-As our test image dataset, we have collected images of Vincent van Gogh's portrait artwork, cropped to a uniform 136x136 pixel region - an image basis of 136x136x3=55488 basis vectors! All images are obtained from [vincentvangogh.org](https://www.vincentvangogh.org/), which hosts a gallery of van Gogh's works.
+Principal component analysis involves a change of basis; rather than characterizing each image by a set of coordinates representing pixel RGB values, the image can be suitably represented in a new basis of principal axes, which is typically smaller than the initial number of coordinates. Each principal axis is some linear combination of the image basis vectors, formed so that the coordinate of the images along the first principal axis - their first principal component - has the largest variance. The second principal axis is chosen such that the second principal component has the next largest possible variance while maintaining that the second and first principal axes are orthogonal, and so on.
 
 #### Purpose for animation
-1. Our goal is to demonstrate through animation the reconstruction of an image with a limited number of principal components, and visualize its refinement as more components are introduced. The key is to observe that far less information is required to obtain a faithful image reconstruction - approximately 100 principal components produce a convincing reconstruction in this example.
-
-2. In addition, we seek to further elucidate the relationship between the image basis and basis of principal axes. Since each principal axis is some linear combination of image basis vectors, we can visualize the projection of the principal axes back onto the image space, and offer a more palpable intepretation of this transformed basis. This visual illuminates how early principal components focus on coarse features of the image, such as a broad background or head shape, while latter components refine details distributed across the image.
-
-3. As noted, the principal axes are chosen such that the variance of the data along each axis is as large as possible. The total variance captured by each principal axis is quantified by the explained variance. We lastly track the cumulative explained variance ratio, whose sum across all principal axes is one, as a metric of how much variability in the data has been accounted for. This quantitative element offers a concise representation of what is observed visually over the course of image reconstruction.
+In addition to showcasing the reconstruction of an image with increasing number of principal components, our goal through animation is to offer a cohesive view into the building blocks of the reconstruction. In the top left section, a given principal axis is projected onto the image basis to gain insight into the regions most strongly influenced by a principal component along this axis. Below this, we plot the value of our image's corresponding principal component, and highlight the trend in variance of principal components across our dataset. Finally, we show the cumulative image reconstruction on the right. The projection of principal axes and the reconstruction work in concert to portray how early components focus more attention on coarser features such as a broad background or the subject's silhouette, while latter components refine details distributed across the image.
 
 #### References
 1. "Vincent van Gogh, his Life and Paintings." Vincent van Gogh Paintings, Drawings, Quotes, and Biography. [https://www.vincentvangogh.org/](https://www.vincentvangogh.org/).
