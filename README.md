@@ -14,7 +14,7 @@
 ### Explanation
 
 #### Introduction
-An artist's perception of the world is often through a different lens. Vincent van Gogh, working during the Impressionist Era, rejected the exactness of increasingly popular photography in favor of simpler representations, reducing the subjects of his paintings to their essential features. Produced with coarse, prominent brush strokes or an unconventional color palette, van Gogh's portraits were unmistakably distinguishable, though far from an exact likeness.
+An artist's perception of the world is often through a different lens. Vincent van Gogh, working during the Impressionist Era, rejected the exactness of increasingly popular photography in favor of simpler representations, reducing the subjects of his paintings to their essential features. Produced with coarse, prominent brush strokes or an unconventional color palette, van Gogh's portraits were unmistakably distinguishable, though deliberately different from an exact likeness.
 
 Principal component analysis is much like a view through an artist's eye. By reducing a collection of data only to those features which capture the greatest *variability* across the dataset, it can provide a simpler representation of high-dimensional data.
 
