@@ -16,11 +16,11 @@
 #### Introduction
 An artist's perception of the world is often through a different lens. Vincent van Gogh, working during the Impressionist Era, rejected the exactness of increasingly popular photography in favor of simpler representations, reducing the subjects of his paintings to their essential features. Produced with coarse, prominent brush strokes or an unconventional color palette, van Gogh's portraits were unmistakably distinguishable, though deliberately different from an exact likeness.
 
-Principal component analysis is much like a view through an artist's eye. By reducing a collection of data only to those features which capture the greatest *variability* across the dataset, it can provide a simpler representation of high-dimensional data.
+Principal component analysis is much like a view through van Gogh's eyes. By reducing a collection of data only to those features which capture the greatest *variability* across the dataset, it can provide a simpler representation of high-dimensional data.
 
 A common application of principal component analysis is dimensionality reduction, as principal components are sorted to express as much variability in the data as possible. We will use animation to illustrate how principal component analysis can be used to reconstruct an image with considerably less information needed.
 
-As our test image dataset, we have collected color images of Vincent van Gogh's portrait artwork, cropped to a uniform 136x136 pixel region - an image basis of 136x136x3=55488 basis vectors. All images are obtained from [vincentvangogh.org](https://www.vincentvangogh.org/), which hosts a gallery of van Gogh's works.
+As our test image dataset, we have collected color images of Vincent van Gogh's portrait artwork, cropped to a uniform 136x136 pixel region. All images are obtained from [vincentvangogh.org](https://www.vincentvangogh.org/), which hosts a gallery of van Gogh's works.
 
 Principal component analysis involves a change of basis; rather than characterizing each image by a set of coordinates representing pixel RGB values, the image can be suitably represented in a new basis of principal axes, which is typically smaller than the initial number of coordinates. Each principal axis is some linear combination of the image basis vectors, formed so that the coordinate of the images along the first principal axis - their first principal component - has the largest variance. The second principal axis is chosen such that the second principal component has the next largest possible variance while maintaining that the second and first principal axes are orthogonal, and so on.
 
